@@ -1,230 +1,754 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    
-    <title>wuzeqin&#39;s life | Think Do Love</title>
-    <meta name="renderer" content="webkit">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <meta name="description" content="吳澤欽&#39;s Life">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="wuzeqin&#39;s life | Think Do Love">
-    <meta name="twitter:description" content="吳澤欽&#39;s Life">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="wuzeqin&#39;s life | Think Do Love">
-    <meta property="og:description" content="吳澤欽&#39;s Life">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    
-    <meta name="author" content="wuzeqin">
-    
-    <link rel="stylesheet" href="/css/vno.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
-    
-    <link rel="icon" href="/images/Favicon.ico">
-    
 
-    <meta name="generator" content="hexo"/>
-    
-    <link rel="alternate" type="application/rss+xml" title="wuzeqin&#39;s life" href="/atom.xml">
-    
 
-    <link rel="canonical" href="http://yoursite.com/2016/08/07/吳澤欽の第壹篇個人博客/"/>
 
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?abe02b142102bf4d1e825de889fc45b1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="吳澤欽の第一篇博客分享下怎麼建立自己的個人博客安裝工欲善其事 必先利其器
+1、Node.jsNode.js下載 v4.4.7 LTS
+2、Git由於本人使用的是Mac 在終端自帶Git 
+Windows的同學 Git下載 
+3、Hexo在終端用命令行安裝Hexo需確保安裝Command Lind Tools在終端輸下述命令即可1$ xcode-select --install
+以管理员的身份安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wuzeqin's life">
+<meta property="og:url" content="http://wuzeqin.life/2016/08/07/吳澤欽の第壹篇個人博客/index.html">
+<meta property="og:site_name" content="wuzeqin's life">
+<meta property="og:description" content="吳澤欽の第一篇博客分享下怎麼建立自己的個人博客安裝工欲善其事 必先利其器
+1、Node.jsNode.js下載 v4.4.7 LTS
+2、Git由於本人使用的是Mac 在終端自帶Git 
+Windows的同學 Git下載 
+3、Hexo在終端用命令行安裝Hexo需確保安裝Command Lind Tools在終端輸下述命令即可1$ xcode-select --install
+以管理员的身份安装">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/repository.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/deploy.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/hexogenerate.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/hexodeploy.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/adddomain.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/addrecord.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/domainmanage1.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/domainmanage.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/adddomainserve.png">
+<meta property="og:image" content="http://obn7tnbjg.bkt.clouddn.com/myblog.png">
+<meta property="og:updated_time" content="2016-08-13T12:48:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wuzeqin's life">
+<meta name="twitter:description" content="吳澤欽の第一篇博客分享下怎麼建立自己的個人博客安裝工欲善其事 必先利其器
+1、Node.jsNode.js下載 v4.4.7 LTS
+2、Git由於本人使用的是Mac 在終端自帶Git 
+Windows的同學 Git下載 
+3、Hexo在終端用命令行安裝Hexo需確保安裝Command Lind Tools在終端輸下述命令即可1$ xcode-select --install
+以管理员的身份安装">
+<meta name="twitter:image" content="http://obn7tnbjg.bkt.clouddn.com/repository.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
 </script>
 
+
+
+
+  <link rel="canonical" href="http://wuzeqin.life/2016/08/07/吳澤欽の第壹篇個人博客/"/>
+
+  <title>  | wuzeqin's life </title>
 </head>
 
-<body class="home-template no-js">
-    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <span class="mobile btn-mobile-menu">
-        <i class="fa fa-list btn-mobile-menu__icon"></i>
-        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
-    </span>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
 
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
     
-<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
-  <div class="panel-main">
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-
-        <a href="/" title="前往 wuzeqin&#39;s life 的主页"><img src="/images/avatar.jpg" width="80" alt="wuzeqin&#39;s life logo" class="panel-cover__logo logo" /></a>
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for wuzeqin&#39;s life">wuzeqin&#39;s life</a></h1>
-        
-        <span class="panel-cover__subtitle panel-subtitle">Think Do Love</span>
-        
-        <hr class="panel-cover__divider" />
-        <p class="panel-cover__description">ideapocket/dreamroom／</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-
-        <div class="navigation-wrapper">
-          <div>
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
-            
-              <li class="navigation__item"><a href="ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ-̫͡-ʔ">我是</a></li>
-            
-              <li class="navigation__item"><a href="/#blog">首页</a></li>
-            
-              <li class="navigation__item"><a href="/archives">归档</a></li>
-            
-              <li class="navigation__item"><a href="/about">关于</a></li>
-            
-            </ul>
-          </nav>
-          </div>
-          <div>
-          <nav class="cover-navigation navigation--social">
-  <ul class="navigation">
-
-  <!-- Weibo-->
   
 
-  <!-- Github -->
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
   
 
-<!-- Stack Overflow -->
-        
-
-  <!-- Google Plus -->
-  
-
-<!-- Facebook -->
-
-  
-<!-- Twitter -->
-
-  
-
-  <li class="navigation__item">
-    <a href="/atom.xml" title="RSS" target="_blank">
-      <i class='social fa fa-rss'></i>
-      <span class="label">RSS</span>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">wuzeqin's life</span>
+      <span class="logo-line-after"><i></i></span>
     </a>
-  </li>
+  </div>
+  <p class="site-subtitle">Think ｜ Do ｜ Love</p>
+</div>
 
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
+<nav class="site-nav">
+  
 
-  </ul>
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
 
-          </div>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-08-07T19:59:34+08:00" content="2016-08-07">
+              2016-08-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/07/吳澤欽の第壹篇個人博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/07/吳澤欽の第壹篇個人博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/07/吳澤欽の第壹篇個人博客/" class="leancloud_visitors" data-flag-title="">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">閱讀次數 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
         </div>
+      </header>
+    
 
-      </div>
 
-    </div>
+    <div class="post-body" itemprop="articleBody">
 
-    <div class="panel-cover--overlay cover-purple"></div>
-  </div>
-</header>
+      
+      
 
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            <article class="post-container post-container--single">
-
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="2016-08-07T11:59:34.000Z" class="post-list__meta--date date">2016-08-07</time> &#8226; <span class="post-meta__tags tags">于&nbsp;</span>
-    </div>
-    <h1 class="post-title"></h1>
-  </header>
-
-  <section class="post">
-    <hr>
-<h2 id="吳澤欽の第壹篇個人博客"><a href="#吳澤欽の第壹篇個人博客" class="headerlink" title="吳澤欽の第壹篇個人博客"></a>吳澤欽の第壹篇個人博客</h2><h1 id="分享下怎麼建立自己的個人博客"><a href="#分享下怎麼建立自己的個人博客" class="headerlink" title="分享下怎麼建立自己的個人博客"></a>分享下怎麼建立自己的個人博客</h1><h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>工欲善其事 必先利其器</p>
+      
+        <hr>
+<h2 id="吳澤欽の第一篇博客"><a href="#吳澤欽の第一篇博客" class="headerlink" title="吳澤欽の第一篇博客"></a>吳澤欽の第一篇博客</h2><h1 id="分享下怎麼建立自己的個人博客"><a href="#分享下怎麼建立自己的個人博客" class="headerlink" title="分享下怎麼建立自己的個人博客"></a>分享下怎麼建立自己的個人博客</h1><h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>工欲善其事 必先利其器<br><br></p>
 <h4 id="1、Node-js"><a href="#1、Node-js" class="headerlink" title="1、Node.js"></a>1、Node.js</h4><p><a href="http://nodejs.org" target="_blank" rel="external">Node.js下載 v4.4.7 LTS</a></p>
 <h4 id="2、Git"><a href="#2、Git" class="headerlink" title="2、Git"></a>2、Git</h4><p>由於本人使用的是Mac 在終端自帶Git </p>
 <p>Windows的同學 <a href="https://git-scm.com/downloads" target="_blank" rel="external">Git下載</a> </p>
-<h4 id="3、Hexo"><a href="#3、Hexo" class="headerlink" title="3、Hexo"></a>3、Hexo</h4><p>在終端用命令行安裝Hexo需確保安裝Command Lind Tools<br>在終端輸下述命令即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ xcode-select --install</div><div class="line">```  </div><div class="line"></div><div class="line">以管理员的身份安装</div></pre></td></tr></table></figure></p>
-<p>$ sudo npm install –unsafe-perm –verbose -g hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">成功後在終端下進入你創建好的文件夾中</div></pre></td></tr></table></figure></p>
-<p>$ cd xxx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">對Hexo初始化</div></pre></td></tr></table></figure></p>
-<p>$ hexo init<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">安裝依賴包</div></pre></td></tr></table></figure></p>
-<p>$ sudo npm install<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">## 本地預覽</div><div class="line">⚠️終端需在hexo文件目錄下輸入</div><div class="line"></div><div class="line">``` </div><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h4 id="3、Hexo"><a href="#3、Hexo" class="headerlink" title="3、Hexo"></a>3、Hexo</h4><p>在終端用命令行安裝Hexo需確保安裝Command Lind Tools<br>在終端輸下述命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ xcode-select --install</div></pre></td></tr></table></figure></p>
+<p>以管理员的身份安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install --unsafe-perm --verbose -g hexo</div></pre></td></tr></table></figure></p>
+<p>成功後在終端下進入你創建好的文件夾中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd xxx</div></pre></td></tr></table></figure></p>
+<p>對Hexo初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
+<p>安裝依賴包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install</div></pre></td></tr></table></figure></p>
+<h2 id="本地預覽"><a href="#本地預覽" class="headerlink" title="本地預覽"></a>本地預覽</h2><p>用本地預覽調試效果更好<br><br><br>⚠️終端需在hexo文件目錄下輸入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
 <p>postscript：妳可以使用簡寫命令 $ hexo g $ hexo s 代替上述命令<br>妳可以看下妳目前的成果了 <a href="localhost:4000" target="_blank" rel="external">本地服務器查看</a></p>
-<h2 id="服務器"><a href="#服務器" class="headerlink" title="服務器"></a>服務器</h2><p>把妳的博客託管到Github上面是個很不錯的選擇  </p>
-<p>如果沒有就去<a href="https://github.com" target="_blank" rel="external">註冊Github帳號</a><br>創建一個倉庫用於存放博客 ⚠️xxx.github.io xxx必須是妳GitHub的用戶名<br><img src="http://obn7tnbjg.bkt.clouddn.com/repository.png" alt="">   </p>
-<p>接著把妳的Hexo部署到Github<br>編輯在Hexo下的_config.yml文件 ⚠️用戶名的替換<br><img src="http://obn7tnbjg.bkt.clouddn.com/deploy.png" alt=""><br>然後執行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div><div class="line">``` 完成部署    </div><div class="line">⚠️以後更新完後要上傳到Github都需要在hexo的目錄下執行👆兩個命令行     </div><div class="line">⚠️如果有出錯的話則需要設置ssh [戳這裡](https://help.github.com/articles/generating-an-ssh-key/)  </div><div class="line"></div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/hexogenerate.png)    </div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/hexodeploy.png)    </div><div class="line"></div><div class="line">部署完後需要等待一些時間才能訪問不然你會遭遇404錯誤 等待時間過長可能妳沒有驗證Github的郵件  </div><div class="line">恭喜你 登陸 xxx.github.io 就能看到妳的成果了 ：）</div><div class="line"></div><div class="line">## 域名&amp;域名解析</div><div class="line">如果還沒有屬於自己域名的話接下去看吧p( ^ O ^ )q       有的話可以跳過: &gt; </div><div class="line"></div><div class="line">首先我們需要購買一個域名 我是去 [Godaddy](www.godaddy.com) 購買 之所以推薦這個是因為能用支付寶支付很方便 ;-)    </div><div class="line">     </div><div class="line">購買完成後 我們需要把妳自己的域名和服務器即xxx.github.io這個地址綁定起來    </div><div class="line">所以我們需要域名解析 我用的是 [DNSPOD](https://www.dnspod.cn)        </div><div class="line">DNSPOD相當於一個中介連結妳自己的域名跟github.io          </div><div class="line">註冊成功後 添加域名      </div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/adddomain.png)     </div><div class="line">下圖的ip是Github的ip 妳只需更改最後一行的紀錄值 xxx.github.io   </div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/adddrecord.png)</div><div class="line"></div><div class="line">接下來去 [Godaddy](www.godaddy.com) 域名管理   </div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/domainmanage1.png)          </div><div class="line">![](http://obn7tnbjg.bkt.clouddn.com/domainmanage.png)   </div><div class="line">添加域名服務器 這兩個地址就是DNSPOD上那兩個默認的地址</div></pre></td></tr></table></figure>
-<p>F1G1NS1.DNSPOD.NET</p>
-<pre><code>
-</code></pre><p>F1G1NS2.DNSPOD.NET<br>```<br><img src="http://obn7tnbjg.bkt.clouddn.com/adddomainserve.png" alt="">   </p>
-<p>大功告成！<br><img src="http://obn7tnbjg.bkt.clouddn.com/myblog.png" alt=""></p>
-<h2 id="後續"><a href="#後續" class="headerlink" title="後續"></a>後續</h2><p>萬里長征第一步  </p>
-<p>擁有自己的博客網站後需要用心的去打理<br>妳可能還需要用 圖床 來上傳圖片<br>需要更換博客的主題或者自己設計博客<br>總之妳已經邁出第一步了那就堅持走下去吧  _<em>(:</em>」∠)_</p>
-<h2 id="感謝"><a href="#感謝" class="headerlink" title="感謝"></a>感謝</h2><p>人生在世總有許多第一次 這是我第一次有自己的域名 第一次搭博客 第一次寫博客</p>
-<h3 id="感謝-1"><a href="#感謝-1" class="headerlink" title="感謝"></a>感謝</h3><ul>
+<h2 id="服務器"><a href="#服務器" class="headerlink" title="服務器"></a>服務器</h2><p>把妳的博客託管到Github上面是個很不錯的選擇<br><br><br>如果沒有就去<a href="https://github.com" target="_blank" rel="external">註冊Github帳號</a><br>創建一個倉庫用於存放博客 ⚠️xxx.github.io xxx必須是妳GitHub的用戶名<br><img src="http://obn7tnbjg.bkt.clouddn.com/repository.png" alt=""><br><br><br>接著把妳的Hexo部署到Github<br>編輯在Hexo下的_config.yml文件(站点配置文件)  ⚠️用戶名的替換<br><img src="http://obn7tnbjg.bkt.clouddn.com/deploy.png" alt=""><br><br><br>然後執行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>完成部署<br>⚠️以後更新完後要上傳到Github都需要在hexo的目錄下執行👆兩個命令行<br>⚠️如果有出錯的話則需要設置ssh <a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">戳這裡</a>  </p>
+<p><img src="http://obn7tnbjg.bkt.clouddn.com/hexogenerate.png" alt=""><br><img src="http://obn7tnbjg.bkt.clouddn.com/hexodeploy.png" alt=""><br><br><br>部署完後需要等待一些時間才能訪問不然你會遭遇404錯誤 等待時間過長可能妳沒有驗證Github的郵件<br>恭喜你 登陸 xxx.github.io 就能看到妳的成果了 ：）</p>
+<h2 id="域名-amp-域名解析"><a href="#域名-amp-域名解析" class="headerlink" title="域名&amp;域名解析"></a>域名&amp;域名解析</h2><p>如果還沒有屬於自己域名的話接下去看吧p( ^ O ^ )q       有的話可以跳過: &gt;<br><br><br>首先我們需要購買一個域名 我是去 <a href="www.godaddy.com">Godaddy</a> 購買 之所以推薦這個是因為能用支付寶支付很方便 ;-)<br><br><br>購買完成後 我們需要把妳自己的域名和服務器即xxx.github.io這個地址綁定起來<br>所以我們需要域名解析 我用的是 <a href="https://www.dnspod.cn" target="_blank" rel="external">DNSPOD</a><br>DNSPOD相當於一個中介連結妳自己的域名跟github.io<br><br><br>註冊成功後 添加域名<br><img src="http://obn7tnbjg.bkt.clouddn.com/adddomain.png" alt=""><br><br><br>下圖的ip是Github的ip 妳只需更改最後一行的紀錄值 xxx.github.io<br><img src="http://obn7tnbjg.bkt.clouddn.com/addrecord.png" alt=""><br><br><br>接下來去 <a href="www.godaddy.com">Godaddy</a> 域名管理<br><img src="http://obn7tnbjg.bkt.clouddn.com/domainmanage1.png" alt=""><br><img src="http://obn7tnbjg.bkt.clouddn.com/domainmanage.png" alt=""><br><br><br>添加域名服務器 這兩個地址就是DNSPOD上那兩個默認的地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">F1G1NS1.DNSPOD.NET</div><div class="line">F1G1NS2.DNSPOD.NET</div></pre></td></tr></table></figure></p>
+<p><img src="http://obn7tnbjg.bkt.clouddn.com/adddomainserve.png" alt=""><br><br><br>大功告成！<br><img src="http://obn7tnbjg.bkt.clouddn.com/myblog.png" alt=""><br><br></p>
+<h2 id="後續"><a href="#後續" class="headerlink" title="後續"></a>後續</h2><p>萬里長征第一步<br><br><br>擁有自己的博客網站後需要用心的去打理<br>妳可能還需要用 圖床 來上傳圖片<br>需要更換博客的主題或者自己設計博客<br>简直酷爆了<br>總之妳已經邁出第一步了那就堅持走下去吧  _<em>(:</em>」∠)_</p>
+<h2 id="感謝"><a href="#感謝" class="headerlink" title="感謝"></a>感謝</h2><p>這是我第一次有自己的域名 第一次搭博客 第一次寫博客 XD<br><br></p>
+<h3 id="幫助"><a href="#幫助" class="headerlink" title="幫助"></a>幫助</h3><ul>
 <li><a href="http://zcill.com" target="_blank" rel="external">Zcill無敵大神</a>    </li>
 <li><a href="http://www.zipperary.com/categories/hexo/" target="_blank" rel="external">Hexo教程 - Zipperary’s Blog</a></li>
 </ul>
 
-  </section>
-
-</article>
-<section class="read-more">
-           
-    
-               
-            <div class="read-more-item">
-                <span class="read-more-item-dim">最近的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2016/08/07/hello-world/" title="Hello World">Hello World</a></h2>
-                <p class="excerpt">
-                
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-                &hellip;
-                </p>
-                <div class="post-list__meta"><time datetime="2016-08-07T11:59:34.000Z" class="post-list__meta--date date">2016-08-07</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/07/hello-world/">继续阅读</a></div>
-                           
-            </div>
-        
-        
-        
-     
-   
-   
-  
-</section>
-
-
-            <footer class="footer">
-    <span class="footer__copyright">
-        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-    </span>
-    <span class="footer__copyright">
-        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
-    </span>
-    <span class="footer__copyright">
-        &copy; 2016 - 本站由 <a href="https://github.com/wuzeqin">@吳澤欽</a> 创建,
-        使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">hexo-theme-new-vno</a> 主题,
-        修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
-    </span>
-</footer>
-
-        </div>
+      
     </div>
 
-    
+    <div>
+      
+        
 
-     
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="吳澤欽" />
+          <p class="site-author-name" itemprop="name">吳澤欽</p>
+          <p class="site-description motion-element" itemprop="description">Think all Different<br> Do it Now <br> Love my Life</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#吳澤欽の第一篇博客"><span class="nav-number">1.</span> <span class="nav-text">吳澤欽の第一篇博客</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分享下怎麼建立自己的個人博客"><span class="nav-number"></span> <span class="nav-text">分享下怎麼建立自己的個人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝"><span class="nav-number">1.</span> <span class="nav-text">安裝</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、Node-js"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、Git"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、Hexo"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地預覽"><span class="nav-number">2.</span> <span class="nav-text">本地預覽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服務器"><span class="nav-number">3.</span> <span class="nav-text">服務器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#域名-amp-域名解析"><span class="nav-number">4.</span> <span class="nav-text">域名&域名解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#後續"><span class="nav-number">5.</span> <span class="nav-text">後續</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感謝"><span class="nav-number">6.</span> <span class="nav-text">感謝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#幫助"><span class="nav-number">6.1.</span> <span class="nav-text">幫助</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吳澤欽</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'wuzeqin';
+      var disqus_identifier = '2016/08/07/吳澤欽の第壹篇個人博客/';
+      var disqus_title = "";
+      var disqus_url = 'http://wuzeqin.life/2016/08/07/吳澤欽の第壹篇個人博客/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("GU5QjwrzvzLy4HkiENb73rBH-gzGzoHsz", "DJQ7NsSkMr38O0tFy3oEMu7J");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
 </body>
 </html>
